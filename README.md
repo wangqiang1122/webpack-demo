@@ -26,3 +26,23 @@ plugins
 plugin可以在webpack运行到莫哥阶段的时候，帮你做一些事情，类似生命周期的概念扩展插件，在webpack构建流程的特定时机注入扩展逻辑来改变结果或做你想要的事情
 
 html-webpack-plugin 使用的是ejs模版引擎 
+
+### CleanWebpackPlugin 清空dist文件夹的内容
+
+### 把css提取成独立文件的 mini-css-extract-plugin
+
+## sourcemap 源码的和打包之后代码的映射关系
+
+* 是否开启sourcemap devtool在package.json配置里  在dev默认开启*
+`
+ eval 速度最快，使用eval包裹模块代码
+ sourcemap：产生.map文件
+ cheap：较快不包含列表信息
+ module: 第三方模块，包含loader的sourcemap(比如jsx to js babel的spurcemap)
+ inline: 将.map作为dataURL嵌入，不单独生成.map文件 
+`
+```
+推荐配置：
+devtoll: 'cheap-module-eval-sourcemap-map' //开发黄精配置
+devtool: 'cheap-module-sourcemap-map' // 线上生产环境配置
+```
