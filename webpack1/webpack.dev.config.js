@@ -1,5 +1,6 @@
 const path = require('path');
-const htmlWebpackPlugin = require('html-webpack-plugin')
+const htmlWebpackPlugin = require('html-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin'); // 清空dist目录
 module.exports = {
     entry: {
        path: path.resolve(__dirname,'./src/index.js')
@@ -36,5 +37,6 @@ module.exports = {
            template: "./index.html",
            filename: "wang.html",
        }),
+       new CleanWebpackPlugin(),
     ]
 }
