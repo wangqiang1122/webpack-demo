@@ -73,3 +73,7 @@ options: {
                 } ]
                 ] }
 ```
+babelrc⽂文件: 新建.babelrc⽂文件，把options部分移⼊入到该⽂文件中，就可以了了
+
+### 使⽤用 glob.sync 第三⽅方库来匹配路路径
+ 
